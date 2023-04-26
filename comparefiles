@@ -1,0 +1,7 @@
+1 --- filecompare1	2023-04-26 16:06:04.747718623 +0000
+2 +++ filecompare2	2023-04-26 16:06:18.923157768 +0000
+3 -This is line 3.
+4 +This is a new line.
+5 -This is line 5.
+6 +This is a modified line.
+7 +This is line 6.
