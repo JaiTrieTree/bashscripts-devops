@@ -46,7 +46,7 @@ if ! git rev-parse --is-inside-work-tree &> /dev/null; then
 fi
 
 # Check for modified files and folders
-modified_files=$(git status --porcelain | grep -E "^(M|A)")
+modified_files=$(git diff --name-only)
 
 if [[ -z "$modified_files" ]]; then
     echo "No modified files or folders to push."
