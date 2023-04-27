@@ -1,0 +1,2 @@
+/home/cloud_user/scripts-devops/gitpush.sh
+/home/cloud_user/dummygit/gitpush.sh
