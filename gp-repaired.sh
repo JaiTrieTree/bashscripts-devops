@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Detect the OS name
 os_name=$(awk -F= '/^NAME/{print tolower($2)}' /etc/os-release | tr -d \" | tr "[:upper:]" "[:lower:]")
 
