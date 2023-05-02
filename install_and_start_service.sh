@@ -1,4 +1,9 @@
 #!/bin/bash
+<<<<<<< HEAD
+=======
+# Usage: sudo ./install_and_start_service.sh <service_name>
+# Replace <service_name> with the name of the service you want to install and start, such as nginx, apache2, or mysql.
+>>>>>>> caee4ad7d23162c0fe56b42a41a054c13495dae9
 
 # Check if the service name is provided
 if [ -z "$1" ]; then
@@ -9,6 +14,7 @@ fi
 # Store the service name
 SERVICE_NAME=$1
 
+<<<<<<< HEAD
 # Detect the Linux distribution and set the package manager
 if [ -f /etc/os-release ]; then
   . /etc/os-release
@@ -38,6 +44,15 @@ $PKG_MANAGER update
 # Install the service
 echo "Installing $SERVICE_NAME..."
 $PKG_MANAGER install -y $SERVICE_NAME
+=======
+# Update package repository
+echo "Updating package repository..."
+apt-get update
+
+# Install the service
+echo "Installing $SERVICE_NAME..."
+apt-get install -y $SERVICE_NAME
+>>>>>>> caee4ad7d23162c0fe56b42a41a054c13495dae9
 
 # Check if the service is installed
 if ! systemctl list-unit-files | grep -q "$SERVICE_NAME.service"; then
@@ -60,4 +75,7 @@ else
   echo "Error: $SERVICE_NAME could not be started."
   exit 1
 fi
+<<<<<<< HEAD
 
+=======
+>>>>>>> caee4ad7d23162c0fe56b42a41a054c13495dae9
